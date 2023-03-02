@@ -1,0 +1,43 @@
+body { overflow: hidden; }
+
+header { position: fixed; z-index: 99; width: 100%; height: 80px; border-bottom: 1px solid #ddd; background-color: white; }
+.header_container { display: flex; justify-content: space-between; align-items: center; width: 1200px; height: 80px; margin: 0 auto; }
+.header_container h1 a { display: flex; align-items: center; height: 80px; }
+
+.gnb { display: flex; }
+.gnb li a { position: relative; padding: 29.5px 20px 29.5px 20px; font-weight: 700; font-size: 20px; color: #333; transition: 0.5s all; }
+.gnb li a.gnb_active { color: #00b5ef; }
+.gnb li a:after { display: block; content: ""; position: absolute; left: 50%; top: 0; width: 0; border-bottom: 3px solid #00b5ef; transition: all 500ms ease-out; }
+.gnb li a:hover:after { left: 0%; top: 0; width: 100%; transition: all 500ms ease-out; }
+.gnb li a:hover { color: #00b5ef; }
+
+#portfolio { position: relative; top: 80px; width: 100%; height: calc(100vh - 80px); background-color: #99e1f8;}
+.portfolio_container { position: absolute; left: calc(50% - 600px) ; top: calc(50% - 323.5px); width: 1200px; height: auto; }
+
+.portfolio_btn { display:flex; margin-bottom: 20px; }
+.portfolio_btn button { display: flex; justify-content: center; align-items: center;}
+.portfolio_btn button img { filter: invert(87%) sepia(19%) saturate(156%) hue-rotate(161deg) brightness(107%) contrast(98%);}
+.pt_play_btn { display: none; }
+
+.portfolio_slide_container { overflow-x: hidden; width: 100%; height: calc(100% - 52px); }
+
+.portfolio_slide_move_box { display: flex; position: relative; width: 100%; height: 100%; }
+
+.portfolio_slide_contents_box { position:relative; width: 390px; height: 100%; padding: 20px; background-color: #e5f7fd;}
+.portfolio_slide_contents_box:not(:last-of-type) { margin-right: 15px; }
+
+.contents_img { display: flex; justify-content: center; align-items: center; width: 100%; height: 200px; background-color: white; }
+
+.contents_explain { width: 100%; height: calc(100% - 200px); padding: 0px 20px 0 20px; }
+.contents_explain h2 { display: flex; align-items: center; position: relative; font-weight: 500; ;font-size: 30px; color: #333; }
+.contents_explain h2 span:after { display: block; content: ""; position: absolute; bottom: 0; width: 100%; height: 3px; background-color: #00b5ef; } 
+.contents_explain h2 span { display: block; margin-right: 20px; font-weight: 700; font-size: 50px; color: #00b5ef; }
+.contents_explain .explain_box { margin-top: 50px; }
+.contents_explain .explain_box li { display: flex; justify-content: space-between; align-items: center; font-weight: 500; font-size: 16px; color: #666; }
+.contents_explain .explain_box li:not(:last-of-type) { margin-bottom: 10px; }
+.contents_explain .explain_box li span { font-weight: 700; font-size: 20px; color: #333;}
+
+.contents_explain .link_box { display: flex; justify-content: space-between; margin-top: 50px; }
+.contents_explain .link_box li { width: 30%; }
+.contents_explain .link_box li a { display: flex; justify-content: center; align-items: center; width: 100%; height: 30px; border: 2px solid #00b5ef; border-radius: 15px; font-size: 14px; color: #333; transition: 0.5s; }
+.contents_explain .link_box li a:hover { border: 2px solid transparent; font-weight: 700; background-color: #00b5ef; color: white;}
